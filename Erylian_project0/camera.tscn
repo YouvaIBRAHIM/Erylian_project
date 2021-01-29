@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://camera.gd" type="Script" id=1]
+
+[node name="CSGBox" type="CSGBox"]
+width = 0.486649
+height = 1.27538
+depth = 0.331741
+
+[node name="cameroot" type="Spatial" parent="."]
+script = ExtResource( 1 )
+
+[node name="h" type="Spatial" parent="cameroot"]
+
+[node name="v" type="Spatial" parent="cameroot/h"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69212, 0 )
+
+[node name="Camera" type="ClippedCamera" parent="cameroot/h/v"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.61206 )
